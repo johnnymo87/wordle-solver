@@ -34,5 +34,6 @@ A starter kit for writing code and [tests](https://github.com/seattlerb/minitest
 ## Debug
 * documentation [here](https://github.com/pry/pry)
 * set a breakpoint with `require 'pry'; binding.pry`
+* show where you are with `whereami`
 * continue with `exit`
 * quit with `exit!`
