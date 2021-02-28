@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:2.6.6-buster AS base
+FROM ruby:2.7-buster AS base
 
 WORKDIR /app
 
