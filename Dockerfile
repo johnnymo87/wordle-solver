@@ -1,12 +1,12 @@
 # Base image
-FROM ruby:2.7-buster AS base
+FROM ruby:3.0-bullseye AS base
 
 WORKDIR /app
 
 ADD ./Gemfile /app/Gemfile
 ADD ./Gemfile.lock /app/Gemfile.lock
 
-RUN gem install bundler -no-ri-no-rdoc && \
+RUN gem install bundler && \
   bundle config set without 'development test' && \
   bundle install
 
