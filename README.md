@@ -7,33 +7,43 @@ A starter kit for writing code and [tests](https://github.com/seattlerb/minitest
 * docker-compose
 
 ## Install
-* build the image
+* Build the image.
   ```sh
   docker-compose build
   ```
 
 ## Run
-* run the tests
+* Drop into the container.
   ```sh
-  docker-compose run --rm app
+  docker-compose run --rm app bash
   ```
-* run something else, like `bash` or `irb`
+* Run the tests.
   ```sh
-  docker-compose run --rm app irb -Ilib
+  rake test
   ```
+* Run `irb`.
+  ```sh
+  irb -Ilib
+  ```
+* Run the linter.
+  ```sh
+  rubocop
+  ```
+  * For more usage instructions, see [the rubocop documentation](https://docs.rubocop.org/rubocop/usage/basic_usage.html).
+
 
 ## Copy
-* this command will clone even hidden files and directories
+* This command will clone even hidden files and directories.
   ```sh
   mkdir -p path/to/new
   cp -rT path/to/this/directory path/to/new/directory
   ```
-  * it's OK if `path/to/new/directory` already exists
-  * it's not OK if `path/to/new` doesn't exist, hence the `mkdir -p`
+  * It's OK if `path/to/new/directory` already exists.
+  * It's not OK if `path/to/new` doesn't exist, hence the `mkdir -p`.
 
 ## Debug
-* documentation [here](https://github.com/pry/pry)
-* set a breakpoint with `require 'pry'; binding.pry`
-* show where you are with `whereami`
-* continue with `exit`
-* quit with `exit!`
+* Documentation for `pry` is [here](https://github.com/pry/pry).
+* Set a breakpoint with `require 'pry'; ::Kernel.binding.pry`.
+* Show where you are with `whereami`.
+* Continue with `exit`.
+* Quit with `exit!`.
