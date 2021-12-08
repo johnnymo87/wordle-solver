@@ -1,0 +1,11 @@
+AllCops:
+  NewCops: enable
+  DisabledByDefault: false
+  TargetRubyVersion: 3.0
+
+#################### Lint ################################
+
+Layout/LineLength:
+  Description: 'Limit lines to 120 characters.'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#maximum-line-length'
+  Max: 120
