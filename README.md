@@ -15,6 +15,10 @@ The only local dependency you need to configure to use this codebase is `docker-
   ```
 
 ## Run
+* Run the app one time and exit:
+  ```console
+  docker-compose run --rm app
+  ```
 * Drop into the container.
   ```console
   docker-compose run --rm app bash
