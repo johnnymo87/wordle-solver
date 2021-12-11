@@ -1,6 +1,9 @@
 # Ruby Starter Kit
-
-A starter kit for writing code and [tests](https://github.com/seattlerb/minitest#label-Specs) in ruby.
+This app is a starter kit for writing code and [tests](https://github.com/seattlerb/minitest#label-Specs) in ruby. Use it as a seed for starting a new ruby project. Use the following command to copy this app's code to a new directory:
+```console
+mkdir -p path/to/new
+cp -r path/to/this/directory path/to/new/directory
+```
 
 #### Dependencies
 * docker
@@ -30,16 +33,6 @@ A starter kit for writing code and [tests](https://github.com/seattlerb/minitest
   rubocop
   ```
   * For more usage instructions, see [the rubocop documentation](https://docs.rubocop.org/rubocop/usage/basic_usage.html).
-
-
-## Copy
-* This command will clone even hidden files and directories.
-  ```sh
-  mkdir -p path/to/new
-  cp -rT path/to/this/directory path/to/new/directory
-  ```
-  * It's OK if `path/to/new/directory` already exists.
-  * It's not OK if `path/to/new` doesn't exist, hence the `mkdir -p`.
 
 ## Debug
 * Documentation for `pry` is [here](https://github.com/pry/pry).
