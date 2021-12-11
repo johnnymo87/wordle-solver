@@ -10,25 +10,25 @@ The only local dependency you need to configure to use this codebase is `docker-
 
 ## Install
 * Build the image.
-  ```sh
+  ```console
   docker-compose build
   ```
 
 ## Run
 * Drop into the container.
-  ```sh
+  ```console
   docker-compose run --rm app bash
   ```
 * Run the tests.
-  ```sh
+  ```console
   rake test
   ```
 * Run `irb`.
-  ```sh
+  ```console
   irb -Ilib
   ```
 * Run the linter.
-  ```sh
+  ```console
   rubocop
   ```
   * For more usage instructions, see [the rubocop documentation](https://docs.rubocop.org/rubocop/usage/basic_usage.html).
