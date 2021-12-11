@@ -5,9 +5,8 @@ mkdir -p path/to/new
 cp -r path/to/this/directory path/to/new/directory
 ```
 
-#### Dependencies
-* docker
-* docker-compose
+## Dependencies
+The only local dependency you need to configure to use this codebase is `docker-compose`. This is great, because once you have docker working, it eliminates the "well it works on my machine" kind of problems. If it works on docker for you, it will work in docker for anyone.
 
 ## Install
 * Build the image.
