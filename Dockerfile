@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:3.0-bullseye AS base
+FROM ruby:3.1-bullseye AS base
 
 WORKDIR /app
 

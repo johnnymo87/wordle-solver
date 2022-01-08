@@ -3,6 +3,5 @@
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'pry', '~> 0.14.1'
-  gem 'rubocop', '~> 1.22', require: false
+  gem 'rubocop', '~> 1.24', require: false
 end

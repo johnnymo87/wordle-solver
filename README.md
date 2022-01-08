@@ -38,8 +38,9 @@ The only local dependency you need to configure to use this codebase is `docker-
   * For more usage instructions, see [the rubocop documentation](https://docs.rubocop.org/rubocop/usage/basic_usage.html).
 
 ## Debug
-* Documentation for `pry` is [here](https://github.com/pry/pry).
-* Set a breakpoint with `require 'pry'; ::Kernel.binding.pry`.
-* Show where you are with `whereami`.
-* Continue with `exit`.
-* Quit with `exit!`.
+* Documentation for `debug.gem` is [here](https://github.com/ruby/debug).
+* Set a breakpoint with `require 'debug'; binding.break`.
+* Show where you are with `list` and `list -`.
+* Continue with `continue`.
+* Quit and kill the program with `kill!`.
+* More control flow options are documented [here](https://github.com/ruby/debug#control-flow).
