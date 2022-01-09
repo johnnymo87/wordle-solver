@@ -66,8 +66,10 @@ GuessResult = Struct.new(:color, :letter, :position, keyword_init: true)
 wordle = Wordle.new(words: WORDS)
 
 6.times do |n|
-  puts 'Suggested words with unique letters:'
+  puts 'Suggested words, with only unique letters:'
   puts wordle.suggest_five_guesses(unique_letters: true)
+  puts 'Suggested words, with sometimes non-unique letters:'
+  puts wordle.suggest_five_guesses(unique_letters: false)
   puts 'Guess? Format: word guessed, followed by letter statuses, space seperated, black is b, yellow is y, green is g. Eg. games ybbgb'
   word_guessed, colors = $stdin.gets.split
   if colors == 'ggggg'
