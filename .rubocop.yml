@@ -9,3 +9,8 @@ Layout/LineLength:
   Description: 'Limit lines to 120 characters.'
   StyleGuide: 'https://github.com/rubocop/ruby-style-guide#maximum-line-length'
   Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  Description: 'Indent method calls that span more than one line.'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#multi-line-method-chains'
+  EnforcedStyle: indented
