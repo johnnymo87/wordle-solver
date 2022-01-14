@@ -40,7 +40,7 @@ class Wordle
     return self.class.new(words: yellow_words).handle_guess(black_guesses) if yellow_words.any?
 
     words_with_black_letters = black_guesses
-                               .flat_map { |guess| possibilities[guess.letter].values }
+                               .flat_map { |guess| possibilities[guess.letter][guess.position] }
                                .reduce(Set.new, :union)
     self.class.new(words: words.difference(words_with_black_letters))
   end
