@@ -31,18 +31,18 @@ class Wordle
     black_guesses = guess_results.select { _1.color == 'b' }
 
     green_words = green_guesses
-                  .map { |guess| possibilities[guess.letter][guess.position] }
-                  .reduce(:intersection) || Set.new
+      .map { |guess| possibilities[guess.letter][guess.position] }
+      .reduce(:intersection) || Set.new
     return self.class.new(words: green_words).handle_guess(yellow_guesses + black_guesses) if green_words.any?
 
     yellow_words = yellow_guesses
-                   .map { |guess| possibilities[guess.letter].except(guess.position).values.reduce(:union) }
-                   .reduce(:intersection) || Set.new
+      .map { |guess| possibilities[guess.letter].except(guess.position).values.reduce(:union) }
+      .reduce(:intersection) || Set.new
     return self.class.new(words: yellow_words).handle_guess(black_guesses) if yellow_words.any?
 
     words_with_black_letters = black_guesses
-                               .flat_map { |guess| possibilities[guess.letter][guess.position] }
-                               .reduce(Set.new, :union)
+      .flat_map { |guess| possibilities[guess.letter][guess.position] }
+      .reduce(Set.new, :union)
     self.class.new(words: words.difference(words_with_black_letters))
   end
 
@@ -63,12 +63,12 @@ class Wordle
 
   def best_yellow_guesses
     best_letters = possibilities
-                   .sort_by { |_, positions| positions.values.sum(&:size) }
-                   .last(5)
-                   .map(&:first)
+      .sort_by { |_, positions| positions.values.sum(&:size) }
+      .last(5)
+      .map(&:first)
     best_letters.permutation(5).map(&:join)
-                .select { words.include?(_1) }
-                .then { Wordle.new(words: _1).best_green_guesses }
+      .select { words.include?(_1) }
+      .then { Wordle.new(words: _1).best_green_guesses }
   end
 end
 
@@ -97,8 +97,8 @@ yellow_wordle = Wordle.new(words: CORRECT_WORDS.union(INCORRECT_WORDS))
     break
   end
   guess_results = colors.chars
-                        .zip(word_guessed.chars, 0..4)
-                        .map { |color, letter, position| GuessResult.new(color:, letter:, position:) }
+    .zip(word_guessed.chars, 0..4)
+    .map { |color, letter, position| GuessResult.new(color:, letter:, position:) }
   green_wordle = green_wordle.handle_guess(guess_results)
   yellow_wordle = yellow_wordle.handle_guess(guess_results)
 end
